@@ -38,6 +38,12 @@ const userScehma = new mongoose.Schema({
     default:0
   },
 
+  password:{
+    type:String,
+    required:true,
+    minLength:8
+  }
+
 },{timestamps:true}); 
 
 module.exports = mongoose.model("User",userScehma);
